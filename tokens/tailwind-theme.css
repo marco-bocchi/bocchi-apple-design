@@ -1,0 +1,137 @@
+/* Bocchi Content · tema Tailwind v4 · v1.0.0 · Virtus Design
+ *
+ * Uso:
+ *   @import "tailwindcss";
+ *   @import "./tokens.css";
+ *   @import "./tailwind-theme.css";
+ *
+ * As cores apontam para as variáveis de tokens.css (troca de tema em tempo de execução).
+ * Raios, sombras, fonte e tamanhos ficam com o valor literal: repetir o mesmo nome com
+ * var() criaria uma referência circular.
+ *
+ * Raios e pesos fora do padrão são apagados com "initial": rounded, rounded-sm, rounded-md,
+ * rounded-2xl, font-bold e font-light simplesmente não são gerados. O build não dá erro:
+ * a classe fica sem efeito, então a busca da checklist de QA continua necessária.
+ */
+
+@theme inline {
+  /* Fonte: Ubuntu 400 e 500. semibold aponta para 500 (a Ubuntu não tem 600). */
+  --font-sans: Ubuntu, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --font-weight-*: initial;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 500;
+
+  /* Escala de texto da casa. Nada abaixo de 12 px. */
+  --text-xs: 12px;
+  --text-xs--line-height: 16px;
+  --text-meta: 13px;
+  --text-meta--line-height: 18px;
+  --text-sm: 14px;
+  --text-sm--line-height: 20px;
+  --text-base: 16px;
+  --text-base--line-height: 22px;
+  --text-title-mobile: 20px;
+  --text-title-mobile--line-height: 26px;
+  --text-title: 22px;
+  --text-title--line-height: 28px;
+
+  /* Raios: só lg (10), xl (16) e full (pill, nativo do Tailwind) */
+  --radius-*: initial;
+  --radius-lg: 10px;
+  --radius-xl: 16px;
+
+  /* Sombras */
+  --shadow-hig-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-hig-md: 0 4px 12px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-segment: 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 0 0.5px rgba(0, 0, 0, 0.04);
+
+  /* Cores do tema */
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-strong: hsl(var(--primary-strong));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-sidebar: hsl(var(--sidebar-background));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+
+  /* Preenchimentos translúcidos e rótulo terciário */
+  --color-fill: var(--fill);
+  --color-fill-strong: var(--fill-strong);
+  --color-fill-subtle: var(--fill-subtle);
+  --color-label-tertiary: var(--label-tertiary);
+  --color-overlay: var(--overlay);
+
+  /* Status: par fundo claro (cor base a 10% a 14%) + texto escuro */
+  --color-status-error: var(--status-error);
+  --color-status-error-text: var(--status-error-text);
+  --color-status-warning: var(--status-warning);
+  --color-status-warning-text: var(--status-warning-text);
+  --color-status-success: var(--status-success);
+  --color-status-success-text: var(--status-success-text);
+  --color-status-info: var(--status-info);
+  --color-status-info-text: var(--status-info-text);
+  --color-status-progress: var(--status-progress);
+  --color-status-progress-text: var(--status-progress-text);
+  --color-status-teal: var(--status-teal);
+  --color-status-teal-text: var(--status-teal-text);
+  --color-status-neutral: var(--status-neutral);
+
+  /* Pontos de etapa do kanban */
+  --color-stage-sent: var(--stage-sent);
+  --color-stage-processing: var(--stage-processing);
+  --color-stage-review: var(--stage-review);
+  --color-stage-scheduled: var(--stage-scheduled);
+  --color-stage-published: var(--stage-published);
+
+  /* Marcas de plataforma: só em ícone, ponto ou barra de gráfico */
+  --color-platform-site: var(--platform-site);
+  --color-platform-wordpress: var(--platform-wordpress);
+  --color-platform-instagram: var(--platform-instagram);
+  --color-platform-facebook: var(--platform-facebook);
+  --color-platform-youtube: var(--platform-youtube);
+  --color-platform-tiktok: var(--platform-tiktok);
+  --color-platform-other: var(--platform-other);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
