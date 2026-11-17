@@ -153,4 +153,4 @@ O Bocchi Content só tem tema claro. Este guia não define tema escuro; uma apli
 
 ## Licença
 
-[MIT](LICENSE) · Virtus Design e Bocchi Advogados. As marcas Bocchi e Bocchi Content não estão incluídas na licença.
+[MIT](LICENSE). As marcas Bocchi e Bocchi Content não estão incluídas na licença.
