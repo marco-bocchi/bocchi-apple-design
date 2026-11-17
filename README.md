@@ -2,7 +2,7 @@
 
 Padrão visual e de interação do **Bocchi Content**, a ferramenta de gestão de conteúdo da Bocchi Advogados. Este repositório existe para que toda aplicação da Bocchi (interna ou pública) siga as mesmas cores, tipografia, medidas, componentes e regras de texto.
 
-Este guia reflete os padrões do Bocchi Content. Onde o guia corrige algo que o app ainda não segue (contraste e foco), vale o guia para aplicações novas e a diferença fica registrada em [Pendências conhecidas](docs/09-acessibilidade.md#pendências-conhecidas).
+Este guia reflete os padrões do Bocchi Content. As falhas de contraste e foco que o app tinha foram corrigidas em 17/11/2026 e ficam registradas em [Correções aplicadas](docs/09-acessibilidade.md#correções-aplicadas).
 
 Versão 1.0.0 · 17/11/2026 · mantido pela Virtus Design.
 

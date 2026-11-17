@@ -35,19 +35,19 @@ Pares medidos com os tokens deste guia:
 
 Ferramenta: regra `color-contrast` do axe (extensão axe DevTools ou `@axe-core/playwright`) em toda tela nova, desktop e celular.
 
-## Pendências conhecidas
+## Correções aplicadas
 
-Medidas no Bocchi Content em 17/11/2026. Aplicações novas já devem nascer com a correção; o app corrige aos poucos.
+Medidas no Bocchi Content em 17/11/2026 e corrigidas no app no mesmo dia. A tabela fica como referência do que não repetir.
 
-| Item | Medida | Correção para aplicação nova |
+| Item | Antes | Agora |
 | --- | --- | --- |
-| Texto de sucesso `#248A3D` sobre sucesso a 10% | 4,0:1 | Token `status-success-text` já é `#1D7633` (5,2:1) |
-| Texto teal `#0C817B` sobre teal a 10% | 4,3:1 | Token `status-teal-text` já é `#0B7570` (5,1:1) |
-| Texto 13 px `muted-foreground` sobre `fill-subtle` (dica de coluna de kanban) | 4,4:1 | `text-foreground/80` (8,0:1) em texto sobre `fill-subtle` |
-| Foco só com halo `ring-primary/20` | 1,35:1 | Contorno de 2 px em `primary` afastado 2 px, padrão deste guia (6,5:1) |
-| Iniciais brancas em avatar amber, emerald, cyan, teal, orange e fuchsia 500 | 2,2:1 a 3,5:1 | Tons 700 (amber 700 5,0:1; emerald 700 5,5:1; cyan 700 5,4:1; teal 700 5,5:1; orange 700 5,2:1; fuchsia 700 6,3:1) e rose 600 (4,7:1) |
-| Borda de campo `input` sobre branco | 1,5:1 | O rótulo visível e o fundo branco sobre `background` identificam o campo; em campo sobre branco puro, borda `#8E8E93` (3,3:1) |
-| Toast some em 1 s | Pouco para ler | Toast de sucesso com 4 s; erro fica até a pessoa fechar |
+| Texto de sucesso sobre sucesso a 10% | `#248A3D`, 4,0:1 | Token `status-success-text` `#1D7633` (5,2:1) |
+| Texto teal sobre teal a 10% | `#0C817B`, 4,3:1 | Token `status-teal-text` `#0B7570` (5,1:1) |
+| Texto 13 px sobre `fill-subtle` (dica de coluna de kanban) | `muted-foreground`, 4,4:1 | `text-foreground/80` (8,0:1) |
+| Foco | Só halo `ring-primary/20`, 1,35:1 | Contorno de 2 px em `primary` afastado 2 px (6,5:1) |
+| Iniciais brancas em avatar | Tons 500, 2,2:1 a 3,5:1 | Tons 700 (5,0:1 a 6,3:1) e rose 600 (4,7:1) |
+| Borda de campo sobre branco puro | `input`, 1,5:1 | `#8E8E93` (3,3:1) |
+| Toast | Some em 1 s, um por vez | Sucesso com 4 s, erro até a pessoa fechar, até 3 visíveis |
 
 ## Foco
 
